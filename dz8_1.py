@@ -40,20 +40,16 @@ def search_data(contacts: List[str]):
 
 def move_data(file_name, file_name_new, strnum):
     data = read_file(file_name)
+    # Обрабатываем переменную strnum
     try:
         not_int = False
         strnum=int(strnum)
     except:
-        not_int = True
-       
-    if  not_int :
         return False
     
-    strnum-=1
-        
     if (len(data) < strnum):
         return False
-    
+    strnum-=1
     with open(file_name_new, 'a', encoding='utf-8') as f:
         f.write(data[strnum])
     return True
