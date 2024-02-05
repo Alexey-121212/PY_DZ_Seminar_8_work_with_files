@@ -46,7 +46,7 @@ def move_data(file_name, file_name_new, strnum):
     except:
         return False
     
-    if (len(data) < strnum):
+    if (len(data) < strnum) | (strnum<1):
         return False
     strnum-=1
     with open(file_name_new, 'a', encoding='utf-8') as f:
