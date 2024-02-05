@@ -42,7 +42,6 @@ def move_data(file_name, file_name_new, strnum):
     data = read_file(file_name)
     # Обрабатываем переменную strnum
     try:
-        not_int = False
         strnum=int(strnum)
     except:
         return False
