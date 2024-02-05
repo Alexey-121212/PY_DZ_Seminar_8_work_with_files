@@ -13,8 +13,11 @@ def read_file(file):
         return []
 
 def show_data(data: list):
+    i=0
     for line in data:
-        print(line)
+        i+=1
+        print(i, " ", line)
+        
    
 def save_data(file):
     print('Введите данные контакта:')
@@ -45,6 +48,9 @@ def move_data(file_name, file_name_new, strnum):
        
     if  not_int :
         return False
+    
+    strnum-=1
+        
     if (len(data) < strnum):
         return False
     
