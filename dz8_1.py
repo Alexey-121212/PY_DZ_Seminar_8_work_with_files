@@ -62,7 +62,7 @@ def main():
         print('1 - запись в файл')
         print('2 - показать записи')
         print('3 - найти запись')
-        print('4 - перенести данные в другой файл')
+        print('4 - скопировать данные в другой файл')
         answer = input('Выберите действие: ')
         if answer == '0':
             flag = False
@@ -79,7 +79,7 @@ def main():
             strnum = input("Введите номер строки для переноса в {name} :".format(name=file_name_new))
             data = read_file(file_name)
             if move_data(file_name, file_name_new, strnum):
-                print("\nСтрока {strnum} перенесена из файла {name_old} в файл {name_new}\n".format(strnum = strnum, name_old = file_name, name_new=file_name_new))
+                print("\nСтрока {strnum} скопирована из файла {name_old} в файл {name_new}\n".format(strnum = strnum, name_old = file_name, name_new=file_name_new))
             else:
                 print("\nОперация переноса строки завершилась неудачно\n")
     
